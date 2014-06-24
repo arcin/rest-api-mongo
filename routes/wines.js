@@ -23,7 +23,12 @@ db.open(function(err, db){
 });
 
 exports.findAll = function(req,res){
-  res.send([{name: "wine1"}, {name: "wine2"}, {name: "wine3"}]);
+  // find all wines and return an array of objects.
+  db.collection('wines', function(err, collection){
+    collection.find().toArray(function(err, items){
+      res.send(items);
+    });
+  });
 };
 
 exports.findById = function(req,res){
