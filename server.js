@@ -3,6 +3,8 @@ var express = require('express'),
 
 var app = express();
 
+app.use('body-parser');
+
 app.get('/wines', wines.findAll);
 app.get('/wines/:id', wines.findById);
 

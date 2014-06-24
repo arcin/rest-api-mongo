@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/arcin/rest-api-mongo",
   "dependencies": {
-    "express": "~4.4.4"
+    "express": "~4.4.4",
+    "mongodb": "~1.4.7",
+    "body-parser": "~1.4.3"
   }
 }
