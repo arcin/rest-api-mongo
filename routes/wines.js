@@ -2,7 +2,7 @@
 var mongo = require('mongodb');
 
 var Server = mongo.Server,
-    Db = mongo.db,
+    Db = mongo.Db,
     ObjectID = mongo.ObjectID;
 
 // configure database server
