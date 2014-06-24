@@ -1,0 +1,19 @@
+{
+  "name": "rest-api-mongo",
+  "version": "0.0.1",
+  "description": "A simple rest api using mongo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arcin/rest-api-mongo.git"
+  },
+  "author": "Charles Arciniega",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arcin/rest-api-mongo/issues"
+  },
+  "homepage": "https://github.com/arcin/rest-api-mongo"
+}
