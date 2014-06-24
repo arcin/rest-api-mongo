@@ -35,9 +35,9 @@ exports.findById = function(req,res){
   var id = req.params.id;
   console.log("Retrieving wine: " + id);
   db.collection('wines', function(err, collection){
-    collection.findOne({'id': new ObjectID(id), function(err, item){
+    collection.findOne({'id': new ObjectID(id)}, function(err, item){
       res.send(item);
-    }});
+    });
   });
 };
 
