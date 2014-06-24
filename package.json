@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/arcin/rest-api-mongo/issues"
   },
-  "homepage": "https://github.com/arcin/rest-api-mongo"
+  "homepage": "https://github.com/arcin/rest-api-mongo",
+  "dependencies": {
+    "express": "~4.4.4"
+  }
 }
