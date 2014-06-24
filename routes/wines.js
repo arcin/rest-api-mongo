@@ -3,7 +3,7 @@ var mongo = require('mongodb');
 
 var Server = mongo.Server,
     Db = mongo.db,
-    BSON = mongo.BSONPure;
+    ObjectID = mongo.ObjectID;
 
 // configure database server
 var server = new Server('localhost', 27017, {auto_reconnect: true}),
@@ -32,5 +32,11 @@ exports.findAll = function(req,res){
 };
 
 exports.findById = function(req,res){
-  res.send({id: req.params.id, name: "The Name", description: "description"});
+  var id = req.params.id;
+  console.log("Retrieving wine: " + id);
+  db.collection('wines', function(err, collection){
+    collection.findOne({'id': new ObjectID(id), function(err, item){
+      res.send(item);
+    }});
+  });
 };
