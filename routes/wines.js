@@ -41,6 +41,21 @@ exports.findById = function(req,res){
   });
 };
 
+exports.addWine = function(req, res){
+  var wine = req.body;
+  console.log('Adding wine: ' + JSON.stringify(wine));
+  db.collection('wines', function(err, collection){
+    collection.insert(wine, {safe: true}, function(err, result){
+      if (err) {
+        res.send({'error':'An error has occured'});
+      } else {
+        console.log('Success: ' + JSON.stringify(resule[0]));
+        res.send(result[0]);
+      }
+    });
+  });
+};
+
 /********************************************************************************************************
 Sample Data
 *********************************************************************************************************/
